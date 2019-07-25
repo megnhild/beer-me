@@ -1,6 +1,7 @@
 import React from 'react';
 
-  const Breweries = ({ breweries = [], handleModal }) => {
+  const Breweries = ({ breweries, handleModal }) => {
+    console.log(breweries)
     return (
       <div>
         {breweries.map((brewery, index) => (

@@ -60,7 +60,13 @@ class App extends Component {
     fetch(selectUrl)
       .then(res => res.json())
       .then((data) => {
-        this.setState({ breweries: data })
+        var breweries;
+        if(Array.isArray(data)){
+          breweries = data;
+        } else {
+          breweries = data.reduce;
+        }
+        this.setState({ breweries: breweries })
       })
       .catch(console.log)
   }
