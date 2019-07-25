@@ -9,7 +9,7 @@ class Header extends Component {
         <div className="container">
           <h1 className="display-4">Beer Me</h1>
           <p className="lead">This is a simple search app to help you find breweries all over the USA.</p>
-          <SearchForm />
+          <SearchForm handleSearch={this.props.handleSearch} handleSelectorChange={this.props.handleSelectorChange} />
         </div>
       </div>
 

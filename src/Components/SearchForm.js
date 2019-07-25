@@ -6,7 +6,7 @@ class SearchForm extends Component {
       <form>
         <div className="form-group">
           <label>Find a Brewery in Your State</label>
-            <select className="custom-select" onChange={this.handleSelectorChange} required> 
+            <select className="custom-select" value={this.selectorValue} onChange={this.props.handleSelectorChange} required> 
               <option value="">- All Breweries -</option>
               <option value="alabama">Alabama</option>
               <option value="alaska">Alaska</option>
@@ -60,17 +60,10 @@ class SearchForm extends Component {
               <option value="wyoming">Wyoming</option>
             </select>
         </div>
-        <button type="submit" className="btn btn-primary" onClick={this.handleSearch}>Show Me</button>
+        <button className="btn btn-primary" onClick={this.props.handleSearch}>Show Me</button>
       </form>
     )
   }
 }
-
-{/* <input 
-className="form-control" 
-type="text" 
-placeholder="type your state here" 
-onChange={this.handleSelectorChange}
-value={this.searchValue}></input> */}
 
 export default SearchForm;
